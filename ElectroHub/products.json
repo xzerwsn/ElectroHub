@@ -1,0 +1,160 @@
+[
+  {
+    "model": "shopapp.category",
+    "fields": {
+      "name": "мониторы",
+      "slug": "monitory",
+      "image": "categories/monitors.jpg"
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "fields": {
+      "name": "смартфоны",
+      "slug": "smartfony",
+      "image": "categories/smartphones.jpg"
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "fields": {
+      "name": "наушники",
+      "slug": "naushniki",
+      "image": "categories/headphones.jpg"
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "fields": {
+      "name": "ноутбуки",
+      "slug": "noutbuki",
+      "image": "categories/laptops.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 1,
+      "name": "Samsung Odyssey G7",
+      "slug": "samsung-odyssey-g7",
+      "image": "products/samsung-odyssey-g7.jpg",
+      "description": "Игровой монитор с кривизной экрана 1000R и частотой обновления 240 Гц",
+      "price": "39999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 1,
+      "name": "Dell UltraSharp U2720Q",
+      "slug": "dell-ultrasharp-u2720q",
+      "image": "products/dell-ultrasharp-u2720q.jpg",
+      "description": "Профессиональный монитор с разрешением 4K и технологией HDR",
+      "price": "29999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 1,
+      "name": "LG 34GN850-B",
+      "slug": "lg-34gn850-b",
+      "image": "products/lg-34gn850-b.jpg",
+      "description": "Широкоформатный игровой монитор с разрешением 3440x1440 пикселей",
+      "price": "44999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 2,
+      "name": "iPhone 13 Pro",
+      "slug": "iphone-13-pro",
+      "image": "products/iphone-13-pro.jpg",
+      "description": "Смартфон с чипом A15 Bionic и тройной камерой 12 Мп",
+      "price": "94999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 2,
+      "name": "Samsung Galaxy S21 Ultra",
+      "slug": "samsung-galaxy-s21-ultra",
+      "image": "products/samsung-galaxy-s21-ultra.jpg",
+      "description": "Смартфон с экраном Dynamic AMOLED 2X и камерой с разрешением 108 Мп",
+      "price": "89999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 3,
+      "name": "Sony WH-1000XM4",
+      "slug": "sony-wh-1000xm4",
+      "image": "products/sony-wh-1000xm4.jpg",
+      "description": "Беспроводные наушники с технологией активного шумоподавления",
+      "price": "24999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 3,
+      "name": "Apple AirPods Pro",
+      "slug": "apple-airpods-pro",
+      "image": "products/apple-airpods-pro.jpg",
+      "description": "Беспроводные наушники с активным шумоподавлением и зарядным кейсом",
+      "price": "23999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 4,
+      "name": "Apple MacBook Pro 16 M1 Pro",
+      "slug": "apple-macbook-pro-16-m1-pro",
+      "image": "products/apple-macbook-pro-16-m1-pro.jpg",
+      "description": "Ноутбук с процессором Apple M1 Pro и экраном Retina",
+      "price": "199999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "fields": {
+      "category": 4,
+      "name": "Dell XPS 15",
+      "slug": "dell-xps-15",
+      "image": "products/dell-xps-15.jpg",
+      "description": "Ультрабук с экраном 4K OLED и процессором Intel Core i7",
+      "price": "169999.00",
+      "available": true,
+      "created": "2023-01-01T00:00:00Z",
+      "updated": "2023-01-01T00:00:00Z"
+    }
+  }
+]

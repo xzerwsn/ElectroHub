@@ -1,0 +1,558 @@
+[
+  {
+    "model": "shopapp.category",
+    "pk": 1,
+    "fields": {
+      "name": "мониторы",
+      "slug": "мониторы",
+      "image": ""
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "pk": 2,
+    "fields": {
+      "name": "наушники",
+      "slug": "наушники",
+      "image": ""
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "pk": 3,
+    "fields": {
+      "name": "ноутбуки",
+      "slug": "ноутбуки",
+      "image": ""
+    }
+  },
+  {
+    "model": "shopapp.category",
+    "pk": 4,
+    "fields": {
+      "name": "смартфоны",
+      "slug": "смартфоны",
+      "image": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Samsung Odyssey G7",
+      "slug": "samsung-odyssey-g7",
+      "image": "",
+      "description": "Игровой монитор с кривизной экрана 1000R и частотой обновления 240 Гц",
+      "price": 39999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Dell UltraSharp U2720Q",
+      "slug": "dell-ultrasharp-u2720q",
+      "image": "",
+      "description": "Профессиональный монитор с разрешением 4K и технологией HDR",
+      "price": 29999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "LG 34GN850-B",
+      "slug": "lg-34gn850-b",
+      "image": "",
+      "description": "Широкоформатный игровой монитор с разрешением 3440x1440 пикселей",
+      "price": 44999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "ASUS ROG Swift PG259QN",
+      "slug": "asus-rog-swift-pg259qn",
+      "image": "",
+      "description": "Игровой монитор с частотой обновления 360 Гц и G-Sync",
+      "price": 54999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "name": "Acer Predator XB273K",
+      "slug": "acer-predator-xb273k",
+      "image": "",
+      "description": "Игровой монитор с разрешением 4K и поддержкой технологии G-Sync",
+      "price": 46999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "BenQ PD3220U",
+      "slug": "benq-pd3220u",
+      "image": "",
+      "description": "Профессиональный монитор для дизайнеров с разрешением 4K",
+      "price": 37999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "ViewSonic VX3276-2K-MHD",
+      "slug": "viewsonic-vx3276-2k-mhd",
+      "image": "",
+      "description": "Монитор с разрешением 2560x1440 пикселей и IPS-матрицей",
+      "price": 16999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "name": "HP Omen X 27",
+      "slug": "hp-omen-x-27",
+      "image": "",
+      "description": "Игровой монитор с разрешением 2560x1440 пикселей и частотой обновления 240 Гц",
+      "price": 28999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "category": 1,
+      "name": "Philips 272B7QUBHEB",
+      "slug": "philips-272b7qubheb",
+      "image": "",
+      "description": "Монитор с USB-C и разрешением 2560x1440 пикселей",
+      "price": 23999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "category": 1,
+      "name": "MSI Optix MAG274QRF-QD",
+      "slug": "msi-optix-mag274qrf-qd",
+      "image": "",
+      "description": "Игровой монитор с разрешением 2560x1440 пикселей и частотой обновления 165 Гц",
+      "price": 32999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 11,
+    "fields": {
+      "category": 4,
+      "name": "iPhone 13 Pro",
+      "slug": "iphone-13-pro",
+      "image": "",
+      "description": "Смартфон с чипом A15 Bionic и тройной камерой 12 Мп",
+      "price": 94999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 12,
+    "fields": {
+      "category": 4,
+      "name": "Samsung Galaxy S21 Ultra",
+      "slug": "samsung-galaxy-s21-ultra",
+      "image": "",
+      "description": "Смартфон с экраном Dynamic AMOLED 2X и камерой с разрешением 108 Мп",
+      "price": 89999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 13,
+    "fields": {
+      "category": 4,
+      "name": "Google Pixel 6 Pro",
+      "slug": "google-pixel-6-pro",
+      "image": "",
+      "description": "Смартфон с процессором Google Tensor и камерой с разрешением 50 Мп",
+      "price": 79999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 14,
+    "fields": {
+      "category": 4,
+      "name": "Xiaomi Mi 11 Ultra",
+      "slug": "xiaomi-mi-11-ultra",
+      "image": "",
+      "description": "Смартфон с экраном AMOLED и тройной камерой 50 Мп",
+      "price": 76999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 15,
+    "fields": {
+      "category": 4,
+      "name": "OnePlus 9 Pro",
+      "slug": "oneplus-9-pro",
+      "image": "",
+      "description": "Смартфон с экраном Fluid AMOLED и камерой с разрешением 48 Мп",
+      "price": 73999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 16,
+    "fields": {
+      "category": 4,
+      "name": "Sony Xperia 1 III",
+      "slug": "sony-xperia-1-iii",
+      "image": "",
+      "description": "Смартфон с 4K HDR OLED экраном и камерой с разрешением 12 Мп",
+      "price": 99999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 17,
+    "fields": {
+      "category": 4,
+      "name": "Huawei P50 Pro",
+      "slug": "huawei-p50-pro",
+      "image": "",
+      "description": "Смартфон с экраном OLED и камерой с разрешением 50 Мп",
+      "price": 84999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 18,
+    "fields": {
+      "category": 4,
+      "name": "ASUS ROG Phone 5",
+      "slug": "asus-rog-phone-5",
+      "image": "",
+      "description": "Игровой смартфон с экраном AMOLED и частотой обновления 144 Гц",
+      "price": 84999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 19,
+    "fields": {
+      "category": 4,
+      "name": "Realme GT",
+      "slug": "realme-gt",
+      "image": "",
+      "description": "Смартфон с экраном Super AMOLED и процессором Snapdragon 888",
+      "price": 54999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 20,
+    "fields": {
+      "category": 4,
+      "name": "Oppo Find X3 Pro",
+      "slug": "oppo-find-x3-pro",
+      "image": "",
+      "description": "Смартфон с экраном AMOLED и камерой с разрешением 50 Мп",
+      "price": 92999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 21,
+    "fields": {
+      "category": 2,
+      "name": "Sony WH-1000XM4",
+      "slug": "sony-wh-1000xm4",
+      "image": "",
+      "description": "Беспроводные наушники с технологией активного шумоподавления",
+      "price": 24999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 22,
+    "fields": {
+      "category": 2,
+      "name": "Apple AirPods Pro",
+      "slug": "apple-airpods-pro",
+      "image": "",
+      "description": "Беспроводные наушники с активным шумоподавлением и зарядным кейсом",
+      "price": 23999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 23,
+    "fields": {
+      "category": 2,
+      "name": "Bose QuietComfort 45",
+      "slug": "bose-quietcomfort-45",
+      "image": "",
+      "description": "Беспроводные наушники с технологией шумоподавления и сенсорным управлением",
+      "price": 28999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 24,
+    "fields": {
+      "category": 2,
+      "name": "Sennheiser Momentum 3 Wireless",
+      "slug": "sennheiser-momentum-3-wireless",
+      "image": "",
+      "description": "Беспроводные наушники с поддержкой Hi-Res Audio и активным шумоподавлением",
+      "price": 32999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 25,
+    "fields": {
+      "category": 2,
+      "name": "Jabra Elite 85t",
+      "slug": "jabra-elite-85t",
+      "image": "",
+      "description": "Беспроводные наушники с активным шумоподавлением и долгим временем работы",
+      "price": 19999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 26,
+    "fields": {
+      "category": 2,
+      "name": "AKG N700NC M2",
+      "slug": "akg-n700nc-m2",
+      "image": "",
+      "description": "Беспроводные наушники с технологией шумоподавления и долгим временем работы",
+      "price": 23999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 27,
+    "fields": {
+      "category": 2,
+      "name": "Beats Studio Buds",
+      "slug": "beats-studio-buds",
+      "image": "",
+      "description": "Беспроводные наушники с активным шумоподавлением и долгим временем работы",
+      "price": 14999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 28,
+    "fields": {
+      "category": 2,
+      "name": "SteelSeries Arctis 7",
+      "slug": "steelseries-arctis-7",
+      "image": "",
+      "description": "Игровые беспроводные наушники с технологией DTS Headphone:X v2.0 и ClearCast микрофон",
+      "price": 18999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 29,
+    "fields": {
+      "category": 2,
+      "name": "HyperX Cloud II Wireless",
+      "slug": "hyperx-cloud-ii-wireless",
+      "image": "",
+      "description": "Игровые наушники с объемным звуком 7.1 и съемным микрофоном",
+      "price": 16999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 30,
+    "fields": {
+      "category": 2,
+      "name": "Logitech G Pro X",
+      "slug": "logitech-g-pro-x",
+      "image": "",
+      "description": "Игровые наушники с Blue VO!CE микрофоном и объемным звуком",
+      "price": 15999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 31,
+    "fields": {
+      "category": 3,
+      "name": "Apple MacBook Pro 16 M1 Pro",
+      "slug": "apple-macbook-pro-16-m1-pro",
+      "image": "",
+      "description": "Ноутбук с процессором Apple M1 Pro и экраном Retina",
+      "price": 199999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 32,
+    "fields": {
+      "category": 3,
+      "name": "Dell XPS 15",
+      "slug": "dell-xps-15",
+      "image": "",
+      "description": "Ультрабук с экраном 4K OLED и процессором Intel Core i7",
+      "price": 169999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 33,
+    "fields": {
+      "category": 3,
+      "name": "ASUS ROG Zephyrus G14",
+      "slug": "asus-rog-zephyrus-g14",
+      "image": "",
+      "description": "Игровой ноутбук с AMD Ryzen 9 и видеокартой RTX 4060",
+      "price": 139999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 34,
+    "fields": {
+      "category": 3,
+      "name": "HP Spectre x360",
+      "slug": "hp-spectre-x360",
+      "image": "",
+      "description": "Ультрабук-трансформер с сенсорным экраном и процессором Intel i7",
+      "price": 124999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 35,
+    "fields": {
+      "category": 3,
+      "name": "Lenovo Legion 5 Pro",
+      "slug": "lenovo-legion-5-pro",
+      "image": "",
+      "description": "Игровой ноутбук с экраном 165 Гц и видеокартой NVIDIA GeForce RTX 3070",
+      "price": 144999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 36,
+    "fields": {
+      "category": 3,
+      "name": "Acer Predator Helios 300",
+      "slug": "acer-predator-helios-300",
+      "image": "",
+      "description": "Игровой ноутбук с Intel Core i7 и графикой RTX 3060",
+      "price": 129999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 37,
+    "fields": {
+      "category": 3,
+      "name": "MSI Creator Z16",
+      "slug": "msi-creator-z16",
+      "image": "",
+      "description": "Мощный ноутбук для дизайнеров с экраном 16:10 и производительным GPU",
+      "price": 169999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 38,
+    "fields": {
+      "category": 3,
+      "name": "Microsoft Surface Laptop 5",
+      "slug": "microsoft-surface-laptop-5",
+      "image": "",
+      "description": "Ультрабук с сенсорным экраном PixelSense и Windows 11",
+      "price": 119999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 39,
+    "fields": {
+      "category": 3,
+      "name": "Razer Blade 15",
+      "slug": "razer-blade-15",
+      "image": "",
+      "description": "Премиальный игровой ноутбук с экраном 300 Гц и видеокартой RTX 3080",
+      "price": 199999.0,
+      "available": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 40,
+    "fields": {
+      "category": 3,
+      "name": "Huawei MateBook X Pro",
+      "slug": "huawei-matebook-x-pro",
+      "image": "",
+      "description": "Тонкий и мощный ноутбук с экраном 3K и металлическим корпусом",
+      "price": 109999.0,
+      "available": true
+    }
+  }
+]

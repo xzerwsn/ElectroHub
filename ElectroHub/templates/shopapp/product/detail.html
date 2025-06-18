@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+
+    /* Стили для детальной страницы товара */
+    .product-detail-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .product-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: #FFF;
+    }
+
+    .product-detail {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .product-image-block {
+        flex: 1;
+    }
+
+    .product-main-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .product-info-block {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #dc3545;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .in-stock {
+        color: #dc3545;
+        font-size: 1rem;
+        padding: 5px 10px;
+        background: #e8f5e9;
+        border-radius: 4px;
+    }
+
+    .out-of-stock {
+        color: #007bff;
+        font-size: 1rem;
+        padding: 5px 10px;
+        background: #ffebee;
+        border-radius: 4px;
+    }
+
+    .product-description h3,
+    .product-specs h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: #fff;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+
+    .product-description p {
+        line-height: 1.6;
+        color: #FFF;
+    }
+
+    .product-specs ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .product-specs li {
+        margin-bottom: 10px;
+        padding: 8px 0;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .product-specs li strong {
+        color: #fff;
+        min-width: 120px;
+        display: inline-block;
+    }
+
+    .product-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .add-to-cart-btn,
+    .buy-now-btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .add-to-cart-btn {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .add-to-cart-btn:hover {
+        background-color: #0069d9;
+    }
+
+    .buy-now-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .buy-now-btn:hover {
+        background-color: #218838;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .product-detail {
+            flex-direction: column;
+        }
+        
+        .product-actions {
+            flex-direction: column;
+        }
+        
+        .add-to-cart-btn,
+        .buy-now-btn {
+            width: 100%;
+        }
+    }
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="product-detail-container">
+    <!-- Название товара по центру -->
+    <h1 class="product-title">{{ product.name }}</h1>
+    
+    <div class="product-detail">
+        <!-- Блок с изображением товара -->
+        <div class="product-image-block">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-main-image">
+            {% else %}
+                <img src="{% static 'images/no-image.jpg' %}" alt="Нет изображения" class="product-main-image">
+            {% endif %}
+        </div>
+        
+        <!-- Блок с информацией о товаре -->
+        <div class="product-info-block">
+            <!-- Цена товара -->
+            <div class="product-price">
+                <span>{{ product.price }} руб.</span>
+                {% if product.available %}
+                    <span class="in-stock">В наличии</span>
+                {% else %}
+                    <span class="out-of-stock">Нет в наличии</span>
+                {% endif %}
+            </div>
+            
+            <!-- Описание товара -->
+            <div class="product-description">
+                <h3>Описание</h3>
+                <p>{{ product.description }}</p>
+            </div>
+            
+            <!-- Характеристики (можно добавить дополнительные поля в модель) -->
+            <div class="product-specs">
+                <h3>Характеристики</h3>
+                <ul>
+                    <li><strong>Категория:</strong> {{ product.category.name }}</li>
+                    <!-- Дополнительные характеристики можно добавить здесь -->
+                </ul>
+            </div>
+            
+            <!-- Кнопки действий -->
+            <div class="product-actions">
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+                <button class="buy-now-btn">Купить сейчас</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

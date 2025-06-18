@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="catalog-container">
+    
+    <div class="catalog-layout">
+        <!-- Блок фильтров слева -->
+        <aside class="filters">
+            <div class="filter-section">
+                <h3>Категории</h3>
+                <ul class="category-list">
+                    <li {% if not category %}class="selected"{% endif %}>
+                        <a href="{% url 'shop:product_list' %}">Все товары</a>
+                    </li>
+                    {% for cat in categories %}
+                    <li {% if category.slug == cat.slug %}class="selected"{% endif %}>
+                        <a href="{% url 'shop:product_list_by_category' cat.slug %}">{{ cat.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="filter-section">
+                <h3>Цена</h3>
+                <form method="get" class="price-filter">
+                    <input type="number" name="min_price" placeholder="От" value="{{ request.GET.min_price }}">
+                    <input type="number" name="max_price" placeholder="До" value="{{ request.GET.max_price }}">
+                    <button type="submit" class="filter-btn">Применить</button>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="products-grid">
+            <div class="products-container">
+                {% for product in page_obj %}
+                <div class="product-card">
+                    <a href="{{ product.get_absolute_url }}" class="product-link">
+                        <div class="product-image">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img src="{% static 'images/no-image.jpg' %}" alt="Нет изображения">
+                            {% endif %}
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">{{ product.name }}</h3>
+                            <p class="product-price">{{ product.price }} руб.</p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" class="page-link">&laquo; первая</a>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">предыдущая</a>
+                {% endif %}
+
+                <span class="current-page">
+                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">следующая</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">последняя &raquo;</a>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}

@@ -5,14 +5,15 @@
     <title>ElectroHub</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav">
                 <li><a href="{% url 'shop:home' %}">ГЛАВНАЯ</a></li>
-                <li><a href="#catalog">КАТАЛОГ</a></li>
+                <li><a href="{% url 'shop:product_list' %}">КАТАЛОГ</a></li>
                 
                 {% if user.is_authenticated %}
                     <!-- Пункты для всех авторизованных -->
