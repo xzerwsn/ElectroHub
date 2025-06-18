@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ElectroHub</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="{% url 'shop:home' %}">ГЛАВНАЯ</a></li>
+                <li><a href="#catalog">КАТАЛОГ</a></li>
+                
+                {% if user.is_authenticated %}
+                    <!-- Пункты для всех авторизованных -->
+                    {% if user.is_superuser %}
+                        <li><a href="/admin/" target="_blank">АДМИН-ПАНЕЛЬ</a></li>
+                    {% endif %}
+                    
+                    <li><a href="{% url 'shop:logout' %}">ВЫЙТИ</a></li>
+                    <li><span class="username">Привет, {{ user.username }}!</span></li>
+                {% else %}
+                    <!-- Пункты для гостей -->
+                    {% if not request.path == '/shop/login/' and not request.path == '/shop/register/' %}
+                        <li><a href="{% url 'shop:login' %}">ВОЙТИ</a></li>
+                        <li><a href="{% url 'shop:register' %}">РЕГИСТРАЦИЯ</a></li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

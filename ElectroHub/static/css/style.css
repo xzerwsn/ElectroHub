@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+
+    background-color: #121212;
+    color: #ffffff;
+
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    padding: 20px 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.nav ul li.active a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 5%;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3a3a3a;
+}
+
+.hero-img img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  opacity: 15%;
+}
+
+.username {
+    color: white;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+/* Общие стили для обеих форм */
+.auth-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px #051724a0, 0 1px 8px #000a;
+    background: rgba(18, 28, 42, 0.97);
+    border: 1.5px solid #2cfaff;
+    color: #eaf6fa;
+    backdrop-filter: blur(2px);
+}
+
+.auth-form h2 {
+    color: #7afff5;
+    text-shadow: 0 2px 8px #29ffe6aa;
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.auth-form p, .auth-form label {
+    color: #bdcfe7;
+}
+
+.auth-form a {
+    color: #7afff5;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.auth-form a:hover {
+    color: #ff7fff;
+}
+
+/* Стили только для формы регистрации */
+.register-form {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Стили только для формы входа */
+.login-form {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Стили для полей ввода */
+.register-form input,
+.login-form input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.2rem;
+    background: #222d3e;
+    border: 1.5px solid #1affd1;
+    color: #f2ffff;
+    border-radius: 7px;
+    font-size: 1.08rem;
+    transition: border 0.2s, background 0.2s;
+}
+
+.register-form input:focus,
+.login-form input:focus {
+    border-color: #ae7aff;
+    outline: none;
+    background: #1e2530;
+    box-shadow: 0 0 10px #7afff577;
+}
+
+/* Кнопки */
+.register-form .btn,
+.login-form .btn,
+.auth-form button {
+    background: linear-gradient(90deg, #00f0ff 0%, #8264ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 2px 16px #36d7ff60;
+    transition: background 0.2s, box-shadow 0.2s, filter 0.2s;
+    cursor: pointer;
+    padding: 12px 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.register-form .btn:hover,
+.login-form .btn:hover,
+.auth-form button:hover {
+    filter: brightness(1.12) saturate(1.3);
+    background: linear-gradient(90deg, #8264ff 0%, #00f0ff 100%);
+    box-shadow: 0 0 32px #00f0ff99;
+}
+
+.register-form ul li, .register-form p {
+    padding: 1%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Ошибки (например, django) */
+.auth-form .errorlist {
+    color: #ff82be;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
